@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 from sys import version
 from bs4 import BeautifulSoup
 import requests
-from requests_html import HTMLSession
+# from requests_html import HTMLSession
 import pandas as pd
 import json
 main_list = []
@@ -74,6 +74,12 @@ def get_amazon_data(data):
     }
     main_list.append(main_dir)
 
-    csv = pd.DataFrame(main_list)
-    csv.to_csv('data.csv',index=False)
+    
+    # csv.to_csv('data.csv',index=False)
     print('script run successfully')
+    return pd.DataFrame(main_list)
+
+
+
+
+# get_amazon_data("https://www.amazon.in/Samsung-Galaxy-Storage-6000mAh-Battery/dp/B0B4F2TTTS/ref=lp_4363159031_1_1")
